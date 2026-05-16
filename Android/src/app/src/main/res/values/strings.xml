@@ -1,213 +1,201 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
- Copyright 2025 Google LLC
- Modifications Copyright 2025-2026 @NightMean (https://github.com/NightMean)
-
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
-
-     http://www.apache.org/licenses/LICENSE-2.0
-
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
--->
-
-<resources>
-    <string name="gpu_unavailable_caption">GPU 不可用 — 无法访问 OpenCL。</string>
-    <string name="gpu_unavailable_learn_more">点击了解更多信息</string>
-    <string name="inference_settings_custom_system_prompt">自定义系统提示词</string>
-    <string name="inference_settings_system_prompt_description">作为系统指令添加到每次对话的开头</string>
-    <string name="inference_settings_label_system_prompt" translatable="false">SYSTEM PROMPT</string>
-    <string name="inference_settings_system_prompt_placeholder">例如：你是一个有帮助的编程助手…</string>
-    <string name="inference_settings_reload_warning">更改最大令牌数或加速器将重新加载模型</string>
-    <string name="inference_settings_save_apply">保存并应用配置</string>
-    <string name="inference_settings_error_out_of_range">数值必须在允许范围内</string>
-    <string name="cd_clear">清除</string>
-    <string name="cd_collapse">收起</string>
-    <string name="cd_expand">展开</string>
-
-    <!-- ConfigKey: display labels for config editor rows -->
-    <string name="config_label_max_tokens" translatable="false">Max tokens</string>
-    <string name="config_label_topk" translatable="false">TopK</string>
-    <string name="config_label_topp" translatable="false">TopP</string>
-    <string name="config_label_temperature" translatable="false">Temperature</string>
-    <string name="config_label_default_max_tokens" translatable="false">Default max tokens</string>
-    <string name="config_label_default_topk" translatable="false">Default TopK</string>
-    <string name="config_label_default_topp" translatable="false">Default TopP</string>
-    <string name="config_label_default_temperature" translatable="false">Default temperature</string>
-    <string name="config_label_support_image" translatable="false">Support\nvision</string>
-    <string name="config_label_support_audio" translatable="false">Support\naudio</string>
-    <string name="config_label_support_thinking" translatable="false">Support\nthinking</string>
-    <string name="config_label_support_tools" translatable="false">Support\ntools</string>
-    <string name="config_label_enable_thinking" translatable="false">Enable thinking</string>
-    <string name="config_label_accelerator" translatable="false">Accelerator</string>
-    <string name="config_label_vision_accelerator" translatable="false">Vision accelerator</string>
-    <string name="config_label_compatible_accelerators" translatable="false">Compatible accelerators</string>
-    <string name="config_label_name" translatable="false">Name</string>
-    <string name="config_label_model_type" translatable="false">Model type</string>
-    <string name="config_label_prefill_tokens" translatable="false">Prefill tokens</string>
-    <string name="config_label_decode_tokens" translatable="false">Decode tokens</string>
-    <string name="config_label_number_of_runs" translatable="false">Number of runs</string>
-
-    <!-- BenchmarkResultsViewer: stat labels (technical) -->
-    <string name="benchmark_stat_model" translatable="false">Model</string>
-    <string name="benchmark_stat_accelerator" translatable="false">Accelerator</string>
-    <string name="benchmark_stat_prefill_tokens" translatable="false">Prefill tokens</string>
-    <string name="benchmark_stat_decode_tokens" translatable="false">Decode tokens</string>
-    <string name="benchmark_stat_number_of_runs" translatable="false">Number of runs</string>
-    <string name="benchmark_stat_app_version" translatable="false">App version</string>
-    <string name="benchmark_stat_prefill_speed" translatable="false">Prefill speed</string>
-    <string name="benchmark_stat_decode_speed" translatable="false">Decode speed</string>
-    <string name="benchmark_stat_time_to_first_token" translatable="false">Time to first token</string>
-    <string name="benchmark_stat_first_init_time" translatable="false">First init time</string>
-    <string name="benchmark_stat_steady_init_time" translatable="false">Steady init time</string>
-    <string name="benchmark_unit_tokens_per_sec" translatable="false">tokens/sec</string>
-    <string name="benchmark_unit_sec" translatable="false">sec</string>
-    <string name="benchmark_unit_ms" translatable="false">ms</string>
-
-    <!-- BenchmarkValueSeriesViewer: sparkline tap label -->
-    <string name="benchmark_sparkline_value">数值：%1$s</string>
-
-    <!-- BenchmarkViewModel: error messages -->
-    <string name="benchmark_error_engine_init">无法初始化模型引擎。这通常意味着所选加速器（GPU/NPU）在此设备上不受支持。\n\n请尝试在基准测试设置中切换到 CPU。</string>
-    <string name="benchmark_error_oom">设备在加载模型时内存不足。请尝试关闭其他应用或使用更小的模型。</string>
-
-    <!-- BenchmarkViewModel: aggregation labels -->
-    <!-- ModelImportDialog: edit dialog -->
-    <string name="dialog_edit_model_defaults_title">编辑模型默认值</string>
-    <string name="dialog_edit_model_active_warning">服务器正在运行此模型 — 重新加载后更改才会生效。已保存的推理自定义设置将重置为这些新默认值。</string>
-    <string name="dialog_edit_model_defaults_note">已保存的推理自定义设置将重置为这些新默认值。</string>
-
-    <!-- SettingsViewModel: validation errors -->
-    <string name="validation_invalid_port">无效的端口号</string>
-    <string name="validation_port_required">端口号为必填项</string>
-    <string name="validation_port_range">端口号必须在 %1$d 和 %2$d 之间</string>
-    <string name="validation_numeric_range">%1$s 必须在 %2$d 和 %3$d 之间</string>
-    <string name="validation_numeric_range_with_unit">%1$s 必须在 %2$d 和 %3$d %4$s 之间</string>
-    <string name="validation_cors_invalid">无效的 CORS 源 — 请使用 *、留空或包含 http(s):// 的逗号分隔 URL</string>
-
-    <!-- DownloadRepository: notification channel -->
-    <string name="notif_channel_download_name" translatable="false">OlliteRT download notification</string>
-
-    <!-- OlliteRTApp: server error dialog -->
-    <string name="dialog_server_error_title">服务器错误</string>
-
-    <!-- InferenceSettingsSheet: edit field content description -->
-    <string name="cd_edit_field">编辑 %1$s</string>
-
-    <!-- DownloadWorker: notification channel + notifications -->
-    <string name="notif_channel_download_worker_name">模型下载中</string>
-    <string name="notif_channel_download_worker_desc">模型下载通知</string>
-    <string name="download_error_disk_full">存储空间不足，无法完成下载。部分文件已被清理。</string>
-    <string name="download_error_timeout">下载超时。请检查网络连接后重试。</string>
-    <string name="download_error_no_internet">无网络连接。请检查网络设置后重试。</string>
-    <string name="download_error_connection_lost">下载过程中网络连接中断。请在连接稳定后重试。</string>
-    <string name="download_error_network">下载因网络错误而失败。请检查连接后重试。</string>
-    <string name="download_error_not_found">模型未找到（404）。请检查模型列表中的模型 ID 和提交哈希值。</string>
-    <string name="download_error_unauthorized">身份验证失败。请检查你的 HuggingFace 令牌，或确认该模型可公开访问。</string>
-    <string name="download_error_server">服务器返回 HTTP %1$d。请稍后重试。</string>
-    <string name="download_error_zip_corrupted">下载失败：模型存档似乎已损坏或包含无效路径。请尝试重新下载。</string>
-    <string name="download_notif_title_generic">正在下载模型</string>
-    <string name="download_notif_title_named">正在下载 \"%1$s\"</string>
-    <string name="download_notif_progress">下载进度：%1$d%%</string>
-
-    <!-- ServerService: error messages -->
-    <string name="error_autostart_boot_prefix">开机自启失败： </string>
-    <string name="error_autostart_launch_prefix">启动时自启失败： </string>
-    <string name="error_model_not_found">未找到模型 \"%1$s\"。请检查模型是否仍已下载，或在设置中更新默认模型。</string>
-    <string name="error_model_file_missing">磁盘上未找到模型文件。模型可能已被删除 — 请在设置中重新下载或更新默认模型。</string>
-    <string name="error_port_in_use">端口 %1$d 已被占用</string>
-    <string name="error_server_failed_to_start">服务器启动失败：%1$s</string>
-    <string name="error_storage_low_model_init">存储空间不足，无法加载模型（可用 %1$sMB，至少需要 %2$sMB）。请释放空间后重试。</string>
-    <string name="error_model_init_unknown">模型初始化期间发生未知错误</string>
-    <string name="error_unknown">未知错误</string>
-
-    <!-- ModelManagerViewModel: error/toast messages -->
-    <string name="error_model_server_unreachable">无法连接到模型服务器</string>
-    <string name="error_model_list_load_failed_detail">加载模型列表失败：%1$s</string>
-    <string name="no_repos_enabled">未启用任何模型源</string>
-    <string name="error_all_repos_offline">所有模型源均无法访问</string>
-    <string name="error_showing_cached_list">正在显示缓存的模型列表 — 无法检查更新</string>
-    <string name="error_some_repos_unavailable">%1$d 个模型源（共 %2$d 个）无法访问</string>
-
-    <!-- RepositoryViewModel: add-repository validation errors -->
-    <string name="repo_error_invalid_url">无效的 URL</string>
-    <string name="repo_error_unsupported_protocol">仅支持 HTTP 和 HTTPS URL</string>
-    <string name="repo_error_already_added">此模型源已添加</string>
-    <string name="repo_error_access_denied">访问被拒绝 — 不支持私有仓库</string>
-    <string name="repo_error_not_found">此 URL 未找到任何文件</string>
-    <string name="repo_error_http">服务器返回错误（HTTP %1$d）</string>
-    <string name="repo_error_invalid_model_list">无法从此 URL 加载有效的模型列表</string>
-    <string name="repo_error_empty_model_list">此 URL 不包含有效的模型列表</string>
-    <string name="repo_error_newer_version">此模型源需要更新版本的 OlliteRT</string>
-    <string name="repo_error_save_failed">无法将模型源数据保存到磁盘</string>
-
-    <!-- RepositoryListScreen -->
-    <string name="repo_add">添加模型源</string>
-    <string name="repo_add_title">添加模型源</string>
-    <string name="repo_add_url_label">URL</string>
-    <string name="repo_add_helper">输入模型列表 JSON 文件的 URL</string>
-    <string name="repo_add_loading">验证中…</string>
-    <string name="repo_added_success">模型源已添加</string>
-    <string name="repo_model_count">%1$d 个模型</string>
-    <string name="repo_model_count_with_hidden">%1$d 个模型 · %2$d 个已隐藏</string>
-    <string name="repo_delete_title">移除模型源？</string>
-    <string name="repo_delete_message">移除 %1$s？这不会删除任何已下载的模型。</string>
-    <string name="repo_disable_title">禁用模型源？</string>
-    <string name="repo_disable_downloaded_info">你有 %1$d 个来自此源的已下载模型。它们将保留在模型界面中，直到你手动删除。</string>
-    <string name="repo_disable_confirm">禁用</string>
-    <string name="repo_disable_downloading_title">下载进行中</string>
-    <string name="repo_disable_downloading_message">来自此源的 %1$d 个模型正在下载中。禁用将取消这些下载。</string>
-    <string name="repo_disable_downloading_cancel_and_disable">取消下载并禁用</string>
-    <string name="repo_delete_downloading_message">来自此源的 %1$d 个模型正在下载中。删除将取消这些下载。</string>
-    <string name="repo_delete_downloading_cancel_and_delete">取消下载并删除</string>
-    <string name="repo_limit_warning">即将达到模型源数量限制</string>
-    <string name="repo_toggle_label">切换 %1$s</string>
-    <string name="add" translatable="false">Add</string>
-    <string name="remove" translatable="false">Remove</string>
-    <string name="paste" translatable="false">Paste</string>
-
-    <!-- RepositoriesCard (Settings) -->
-    <string name="repo_card_no_sources">没有模型源</string>
-    <string name="repo_card_all_enabled">%1$d 个已启用 · 0 个已禁用</string>
-    <string name="repo_card_enabled_disabled">%1$d 个已启用 · %2$d 个已禁用</string>
-    <string name="repo_card_tap_hint">点击管理模型源</string>
-    <string name="repo_model_count_none">—</string>
-
-    <!-- RepositoryDetailScreen -->
-    <string name="repo_not_found">未找到模型源</string>
-    <string name="repo_detail_description">描述</string>
-    <string name="repo_detail_url">URL</string>
-    <string name="repo_detail_models">模型</string>
-    <string name="repo_detail_version">内容版本</string>
-    <string name="repo_detail_share">分享 URL</string>
-    <string name="repo_detail_delete">移除模型源</string>
-    <string name="repo_detail_last_error">上次错误</string>
-    <string name="repo_detail_models_section">此源中的模型</string>
-
-    <!-- ServerLlmModelHelper: error messages -->
-    <string name="error_model_file_not_found">未找到模型文件：%1$s</string>
-    <string name="error_model_file_corrupted">模型文件似乎已损坏或被截断（%1$d 字节）：%2$s</string>
-    <string name="error_model_file_size_mismatch">模型文件已损坏（大小不匹配：磁盘上为 %1$s，预期为 %2$s）。请删除该模型并重新下载。</string>
-    <string name="error_storage_insufficient">存储空间不足，无法加载模型（可用 %1$sMB，至少需要 %2$sMB）。请删除未使用的模型或文件以释放空间，然后重试。</string>
-
-    <!-- ErrorSuggestions: recovery suggestions -->
-    <string name="suggestion_context_overflow">请尝试在 OlliteRT 设置中启用提示压缩（截断历史记录、压缩工具架构或精简提示），或发送更短的提示。</string>
-    <string name="suggestion_timeout">请尝试发送更短的提示或重启服务器。</string>
-    <string name="suggestion_model_not_found">请在模型界面中检查可用的已下载模型。</string>
-    <string name="suggestion_model_files_missing">模型文件可能已被删除。请尝试在模型界面中重新下载模型。</string>
-    <string name="suggestion_port_bind_failure">端口已被其他应用占用。请关闭占用该端口的应用，或在设置中更改端口号。</string>
-    <string name="suggestion_model_instance_null">模型未加载。请等待加载完成或重启服务器。</string>
-    <string name="suggestion_image_decode_failed">无法解码 base64 图像数据。请验证数据 URI 格式是否正确（data:image/…;base64,…），且 base64 负载未被截断。</string>
-    <string name="suggestion_oom">设备内存不足。请尝试关闭其他应用、使用更小的模型，或在推理设置中减少最大令牌数。</string>
-
-    <!-- CopyUrlReceiver: clipboard label -->
-    <string name="clipboard_label_endpoint">OlliteRT 端点</string>
-
-    <!-- InferenceRunner: error message -->
-    <string name="error_model_init_failed">模型初始化失败：%1$s</string>
+<string name="notif_model_update_title" translatable="false">Model update available</string>
+<string name="notif_model_update_text" translatable="false">A newer version of %1$s is available</string>
+<!--  Model Update Dialog (shown when tapping a model update notification)  -->
+<string name="model_update_dialog_title" translatable="false">Update available for %1$s</string>
+<string name="model_update_dialog_body_empty" translatable="false">A newer version of this model is available.</string>
+<string name="model_update_dialog_server_running" translatable="false">Stop the server before updating this model.</string>
+<string name="model_update_dialog_ignore" translatable="false">Ignore this update</string>
+<string name="model_update_dialog_later" translatable="false">Later</string>
+<string name="model_update_dialog_not_found" translatable="false">Update info no longer available.</string>
+<!--  InferenceSettingsSheet  -->
+<string name="inference_settings_title">Inference Settings</string>
+<string name="inference_settings_tooltip_edit_defaults">Edit model defaults</string>
+<string name="inference_settings_tooltip_reset">Reset to defaults</string>
+<string name="inference_settings_label_temperature" translatable="false">TEMPERATURE</string>
+<string name="inference_settings_label_max_tokens" translatable="false">MAX TOKENS</string>
+<string name="inference_settings_label_top_k" translatable="false">TOP-K</string>
+<string name="inference_settings_label_top_p" translatable="false">TOP-P</string>
+<string name="inference_settings_allow_thinking">Allow Thinking</string>
+<string name="inference_settings_thinking_supported">Enables the model\'s thinking mode for step-by-step reasoning</string>
+<string name="inference_settings_thinking_unsupported">This model does not support thinking mode</string>
+<string name="inference_settings_accelerator">Accelerator</string>
+<string name="inference_settings_accelerator_only">This model only supports %1$s acceleration</string>
+<!--  GPU Unavailable Dialog  -->
+<string name="gpu_unavailable_dialog_title">GPU Acceleration Unavailable</string>
+<string name="gpu_unavailable_dialog_body">The OpenCL library required for GPU inference is not accessible on this device. This is a known limitation of the current version of LiteRT LM on some phones (e.g. Pixel 5).\n\nThe app will use CPU instead — inference works correctly but is slower. Sampler settings (TopK, TopP, Temperature) may not take effect.\n\nIf you\'d like GPU support for your device, consider raising an issue at the</string>
+<string name="gpu_unavailable_dialog_link_text">LiteRT-LM GitHub</string>
+<string name="gpu_unavailable_dialog_dont_show_again">Don\'t show this again</string>
+<string name="gpu_unavailable_caption">GPU unavailable — OpenCL not accessible.</string>
+<string name="gpu_unavailable_learn_more">Tap for more information</string>
+<string name="inference_settings_custom_system_prompt">Custom System Prompt</string>
+<string name="inference_settings_system_prompt_description">Prepended to every conversation as a system instruction</string>
+<string name="inference_settings_label_system_prompt" translatable="false">SYSTEM PROMPT</string>
+<string name="inference_settings_system_prompt_placeholder">e.g. You are a helpful coding assistant…</string>
+<string name="inference_settings_reload_warning">Changes to Max Tokens or Accelerator will reload the model</string>
+<string name="inference_settings_save_apply">Save & Apply Configuration</string>
+<string name="inference_settings_error_out_of_range">Values must be within the allowed range</string>
+<string name="cd_clear">Clear</string>
+<string name="cd_collapse">Collapse</string>
+<string name="cd_expand">Expand</string>
+<!--  ConfigKey: display labels for config editor rows  -->
+<string name="config_label_max_tokens" translatable="false">Max tokens</string>
+<string name="config_label_topk" translatable="false">TopK</string>
+<string name="config_label_topp" translatable="false">TopP</string>
+<string name="config_label_temperature" translatable="false">Temperature</string>
+<string name="config_label_default_max_tokens" translatable="false">Default max tokens</string>
+<string name="config_label_default_topk" translatable="false">Default TopK</string>
+<string name="config_label_default_topp" translatable="false">Default TopP</string>
+<string name="config_label_default_temperature" translatable="false">Default temperature</string>
+<string name="config_label_support_image" translatable="false">Support\nvision</string>
+<string name="config_label_support_audio" translatable="false">Support\naudio</string>
+<string name="config_label_support_thinking" translatable="false">Support\nthinking</string>
+<string name="config_label_support_tools" translatable="false">Support\ntools</string>
+<string name="config_label_enable_thinking" translatable="false">Enable thinking</string>
+<string name="config_label_accelerator" translatable="false">Accelerator</string>
+<string name="config_label_vision_accelerator" translatable="false">Vision accelerator</string>
+<string name="config_label_compatible_accelerators" translatable="false">Compatible accelerators</string>
+<string name="config_label_name" translatable="false">Name</string>
+<string name="config_label_model_type" translatable="false">Model type</string>
+<string name="config_label_prefill_tokens" translatable="false">Prefill tokens</string>
+<string name="config_label_decode_tokens" translatable="false">Decode tokens</string>
+<string name="config_label_number_of_runs" translatable="false">Number of runs</string>
+<!--  BenchmarkResultsViewer: stat labels (technical)  -->
+<string name="benchmark_stat_model" translatable="false">Model</string>
+<string name="benchmark_stat_accelerator" translatable="false">Accelerator</string>
+<string name="benchmark_stat_prefill_tokens" translatable="false">Prefill tokens</string>
+<string name="benchmark_stat_decode_tokens" translatable="false">Decode tokens</string>
+<string name="benchmark_stat_number_of_runs" translatable="false">Number of runs</string>
+<string name="benchmark_stat_app_version" translatable="false">App version</string>
+<string name="benchmark_stat_prefill_speed" translatable="false">Prefill speed</string>
+<string name="benchmark_stat_decode_speed" translatable="false">Decode speed</string>
+<string name="benchmark_stat_time_to_first_token" translatable="false">Time to first token</string>
+<string name="benchmark_stat_first_init_time" translatable="false">First init time</string>
+<string name="benchmark_stat_steady_init_time" translatable="false">Steady init time</string>
+<string name="benchmark_unit_tokens_per_sec" translatable="false">tokens/sec</string>
+<string name="benchmark_unit_sec" translatable="false">sec</string>
+<string name="benchmark_unit_ms" translatable="false">ms</string>
+<!--  BenchmarkValueSeriesViewer: sparkline tap label  -->
+<string name="benchmark_sparkline_value" translatable="false">Value: %1$s</string>
+<!--  BenchmarkViewModel: error messages  -->
+<string name="benchmark_error_engine_init" translatable="false">The model engine could not be initialized. This usually means the selected accelerator (GPU/NPU) is not supported on this device.\n\nTry switching to CPU in the benchmark settings.</string>
+<string name="benchmark_error_oom" translatable="false">The device ran out of memory while loading the model. Try closing other apps or using a smaller model.</string>
+<!--  BenchmarkViewModel: aggregation labels  -->
+<!--  ModelImportDialog: edit dialog  -->
+<string name="dialog_edit_model_defaults_title">Edit Model Defaults</string>
+<string name="dialog_edit_model_active_warning">Server is running this model — changes take effect after it reloads. Saved inference customizations will be reset to these new defaults.</string>
+<string name="dialog_edit_model_defaults_note">Saved inference customizations will be reset to these new defaults.</string>
+<!--  SettingsViewModel: validation errors  -->
+<string name="validation_invalid_port">Invalid port number</string>
+<string name="validation_port_required">A port number is required</string>
+<string name="validation_port_range">Port must be between %1$d and %2$d</string>
+<string name="validation_numeric_range">%1$s must be between %2$d and %3$d</string>
+<string name="validation_numeric_range_with_unit">%1$s must be between %2$d and %3$d %4$s</string>
+<string name="validation_cors_invalid">Invalid CORS origins — use *, blank, or comma-separated URLs with http(s)://</string>
+<!--  DownloadRepository: notification channel  -->
+<string name="notif_channel_download_name" translatable="false">OlliteRT download notification</string>
+<!--  OlliteRTApp: server error dialog  -->
+<string name="dialog_server_error_title">Server Error</string>
+<!--  InferenceSettingsSheet: edit field content description  -->
+<string name="cd_edit_field">Edit %1$s</string>
+<!--  DownloadWorker: notification channel + notifications  -->
+<string name="notif_channel_download_worker_name">Model Downloading</string>
+<string name="notif_channel_download_worker_desc">Notifications for model downloading</string>
+<string name="download_error_disk_full">Not enough storage space to complete the download. Partial files have been cleaned up.</string>
+<string name="download_error_timeout">Download timed out. Check your internet connection and try again.</string>
+<string name="download_error_no_internet">No internet connection. Check your network settings and try again.</string>
+<string name="download_error_connection_lost">Network connection was lost during download. Try again when your connection is stable.</string>
+<string name="download_error_network">Download failed due to a network error. Check your connection and try again.</string>
+<string name="download_error_not_found">Model not found (404). Check the model ID and commit hash in your model list.</string>
+<string name="download_error_unauthorized">Authentication failed. Check your HuggingFace token or verify the model is publicly accessible.</string>
+<string name="download_error_server">Server returned HTTP %1$d. Try again later.</string>
+<string name="download_error_zip_corrupted">Download failed: the model archive appears corrupted or contains invalid paths. Try downloading again.</string>
+<string name="download_notif_title_generic">Downloading model</string>
+<string name="download_notif_title_named">Downloading \"%1$s\"</string>
+<string name="download_notif_progress">Downloading in progress: %1$d%%</string>
+<!--  ServerService: error messages  -->
+<string name="error_autostart_boot_prefix">Auto-start on boot failed: </string>
+<string name="error_autostart_launch_prefix">Auto-start on launch failed: </string>
+<string name="error_model_not_found">Model \'%1$s\' not found. Check that the model is still downloaded or update the default model in Settings.</string>
+<string name="error_model_file_missing">Model file not found on disk. The model may have been deleted — re-download or update the default model in Settings.</string>
+<string name="error_port_in_use">Port %1$d is already in use</string>
+<string name="error_server_failed_to_start">Server failed to start: %1$s</string>
+<string name="error_storage_low_model_init">Not enough storage to load model (%1$sMB available, need at least %2$sMB). Free up space and try again.</string>
+<string name="error_model_init_unknown">Unknown error during model initialization</string>
+<string name="error_unknown">Unknown error</string>
+<!--  ModelManagerViewModel: error/toast messages  -->
+<string name="error_model_server_unreachable">Could not reach model server</string>
+<string name="error_model_list_load_failed_detail">Failed to load model list: %1$s</string>
+<string name="no_repos_enabled">No model sources enabled</string>
+<string name="error_all_repos_offline">All model sources are unreachable</string>
+<string name="error_showing_cached_list">Showing cached model list — couldn\'t check for updates</string>
+<string name="error_some_repos_unavailable">%1$d of %2$d model sources are unreachable</string>
+<!--  RepositoryViewModel: add-repository validation errors  -->
+<string name="repo_error_invalid_url">Invalid URL</string>
+<string name="repo_error_unsupported_protocol">Only HTTP and HTTPS URLs are supported</string>
+<string name="repo_error_already_added">This repository is already added</string>
+<string name="repo_error_access_denied">Access denied — private repositories are not supported</string>
+<string name="repo_error_not_found">No file found at this URL</string>
+<string name="repo_error_http">Server returned an error (HTTP %1$d)</string>
+<string name="repo_error_invalid_model_list">Could not load a valid model list from this URL</string>
+<string name="repo_error_empty_model_list">This URL does not contain a valid model list</string>
+<string name="repo_error_newer_version">This repository requires a newer version of OlliteRT</string>
+<string name="repo_error_save_failed">Failed to save repository data to disk</string>
+<!--  RepositoryListScreen  -->
+<string name="repo_add">Add model source</string>
+<string name="repo_add_title">Add Model Source</string>
+<string name="repo_add_url_label">URL</string>
+<string name="repo_add_helper">Enter the URL of a model list JSON file</string>
+<string name="repo_add_loading">Validating…</string>
+<string name="repo_added_success">Model source added</string>
+<string name="repo_model_count">%1$d models</string>
+<string name="repo_model_count_with_hidden">%1$d models · %2$d hidden</string>
+<string name="repo_delete_title">Remove model source?</string>
+<string name="repo_delete_message">Remove %1$s? This won\'t delete any downloaded models.</string>
+<string name="repo_disable_title">Disable model source?</string>
+<string name="repo_disable_downloaded_info">You have %1$d downloaded model(s) from this source. They will remain on the Models screen until you delete them.</string>
+<string name="repo_disable_confirm">Disable</string>
+<string name="repo_disable_downloading_title">Download in progress</string>
+<string name="repo_disable_downloading_message">%1$d model(s) from this source are currently downloading. Disabling will cancel the download(s).</string>
+<string name="repo_disable_downloading_cancel_and_disable">Cancel download & disable</string>
+<string name="repo_delete_downloading_message">%1$d model(s) from this source are currently downloading. Deleting will cancel the download(s).</string>
+<string name="repo_delete_downloading_cancel_and_delete">Cancel download & delete</string>
+<string name="repo_limit_warning">Approaching model source limit</string>
+<string name="repo_toggle_label">Toggle %1$s</string>
+<string name="add" translatable="false">Add</string>
+<string name="remove" translatable="false">Remove</string>
+<string name="paste" translatable="false">Paste</string>
+<!--  RepositoriesCard (Settings)  -->
+<string name="repo_card_no_sources">No model sources</string>
+<string name="repo_card_all_enabled">%1$d enabled · 0 disabled</string>
+<string name="repo_card_enabled_disabled">%1$d enabled · %2$d disabled</string>
+<string name="repo_card_tap_hint">Tap to manage model sources</string>
+<string name="repo_model_count_none">—</string>
+<!--  RepositoryDetailScreen  -->
+<string name="repo_not_found">Model source not found</string>
+<string name="repo_detail_description">Description</string>
+<string name="repo_detail_url">URL</string>
+<string name="repo_detail_models">Models</string>
+<string name="repo_detail_version">Content version</string>
+<string name="repo_detail_share">Share URL</string>
+<string name="repo_detail_delete">Remove model source</string>
+<string name="repo_detail_last_error">Last error</string>
+<string name="repo_detail_models_section">Models in this source</string>
+<!--  ServerLlmModelHelper: error messages  -->
+<string name="error_model_file_not_found">Model file not found: %1$s</string>
+<string name="error_model_file_corrupted">Model file appears corrupted or truncated (%1$d bytes): %2$s</string>
+<string name="error_model_file_size_mismatch">Model file is corrupted (size mismatch: %1$s on disk, expected %2$s). Please delete the model and download it again.</string>
+<string name="error_storage_insufficient">Insufficient storage to load model (%1$sMB free, need at least %2$sMB). Free up space by deleting unused models or files, then try again.</string>
+<!--  ErrorSuggestions: recovery suggestions  -->
+<string name="suggestion_context_overflow">Try enabling prompt compaction (Truncate History, Compact Tool Schemas, or Trim Prompt) in OlliteRT Settings, or send shorter prompts.</string>
+<string name="suggestion_timeout">Try sending a shorter prompt or restarting the server.</string>
+<string name="suggestion_model_not_found">Check the Models screen for available downloaded models.</string>
+<string name="suggestion_model_files_missing">The model files may have been deleted. Try re-downloading the model from the Models screen.</string>
+<string name="suggestion_port_bind_failure">The port is already in use by another app. Close the app occupying the port or change the port number in Settings.</string>
+<string name="suggestion_model_instance_null">The model is not loaded. Wait for loading to complete or restart the server.</string>
+<string name="suggestion_image_decode_failed">The base64 image data could not be decoded. Verify the data URI is correctly formatted (data:image/…;base64,…) and the base64 payload is not truncated.</string>
+<string name="suggestion_oom">The device ran out of memory. Try closing other apps, using a smaller model, or reducing Max Tokens in Inference Settings.</string>
+<!--  CopyUrlReceiver: clipboard label  -->
+<string name="clipboard_label_endpoint">OlliteRT Endpoint</string>
+<!--  InferenceRunner: error message  -->
+<string name="error_model_init_failed">Model initialization failed: %1$s</string>
 </resources>
